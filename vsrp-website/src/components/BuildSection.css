@@ -136,13 +136,15 @@
   right: 32px;
   width: 52px;
   height: 52px;
-  background-color: transparent !important;
+  background-color: rgba(15, 16, 22, 0.75) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 50% !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: none !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
   z-index: 999;
   transition: transform 0.3s ease, border-color 0.3s ease;
   text-decoration: none;
@@ -150,40 +152,96 @@
 
 .whatsapp-float-btn:hover {
   transform: scale(1.08);
-  border-color: rgba(255, 255, 255, 0.5) !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  background-color: rgba(15, 16, 22, 0.9) !important;
 }
 
 /* RESPONSIVE BREAKPOINTS */
-@media (max-width: 768px) {
+
+@media (max-width: 1199px) {
   .build-section {
-    padding: 70px 20px 40px;
+    padding: 80px 5vw 40px;
     min-height: auto;
   }
 
   .build-title {
-    font-size: 34px;
+    font-size: clamp(34px, 4.8vw, 56px);
+  }
+}
+
+@media (max-width: 991px) {
+  .build-section {
+    padding: 70px 24px 35px;
+  }
+
+  .v-logo-mask-container {
+    width: min(380px, 80vw);
+    height: min(300px, 64vw);
+  }
+
+  .build-visual-wrapper {
+    margin: 40px 0 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .build-section {
+    padding: 60px 20px 30px;
+  }
+
+  .build-title {
+    font-size: clamp(28px, 6.5vw, 38px);
   }
 
   .build-subtitle {
-    font-size: 15px;
+    font-size: 14.5px;
     margin-top: 14px;
   }
 
   .v-logo-mask-container {
-    width: min(340px, 85vw);
-    height: min(270px, 68vw);
+    width: min(300px, 82vw);
+    height: min(240px, 66vw);
   }
 
   .build-visual-wrapper {
-    margin: 35px 0 30px;
+    margin: 30px 0 25px;
   }
 
   .whatsapp-float-btn {
     bottom: 20px;
     right: 20px;
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
+  }
+}
+
+@media (max-width: 479px) {
+  .build-section {
+    padding: 50px 16px 25px;
+  }
+
+  .build-title {
+    font-size: clamp(24px, 7.5vw, 32px);
+  }
+
+  .build-subtitle {
+    font-size: 13.5px;
+    margin-top: 10px;
+  }
+
+  .v-logo-mask-container {
+    width: min(250px, 85vw);
+    height: min(200px, 68vw);
+  }
+
+  .build-visual-wrapper {
+    margin: 25px 0 20px;
+  }
+
+  .whatsapp-float-btn {
+    bottom: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
   }
 }

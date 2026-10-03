@@ -228,66 +228,96 @@
 /* -------------------------------- */
 /* TABLET */
 /* -------------------------------- */
+/* RESPONSIVE DESIGN */
+/* -------------------------------- */
 
-@media (max-width: 900px) {
-
+@media (max-width: 1199px) {
     .rubber-video-content {
         width: 90%;
     }
 
     .rubber-video-content h2 {
-        font-size: clamp(46px, 7vw, 70px);
-
-        letter-spacing: -2.5px;
+        font-size: clamp(44px, 5.5vw, 68px);
+        letter-spacing: -2px;
     }
 }
 
-/* -------------------------------- */
-/* MOBILE */
-/* -------------------------------- */
-
-@media (max-width: 600px) {
-
+@media (max-width: 991px) {
     .rubber-video-section {
-        min-height: 650px;
-    }
-
-    .rubber-video-content {
-        width: calc(100% - 40px);
-
-        margin-top: 0;
+        height: 80vh;
+        min-height: 520px;
     }
 
     .rubber-video-content h2 {
-        font-size: clamp(38px, 11vw, 54px);
-
-        line-height: 1;
-
-        letter-spacing: -2px;
+        font-size: clamp(36px, 6vw, 54px);
+        letter-spacing: -1.5px;
     }
 
     .product-category-btn {
         height: 54px;
+        margin-top: 32px;
+    }
+}
 
-        margin-top: 30px;
+@media (max-width: 767px) {
+    .rubber-video-section {
+        height: 75vh;
+        min-height: 460px;
+        padding: 0 20px;
+    }
 
+    .rubber-video-content {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .rubber-video-content h2 {
+        font-size: clamp(28px, 7.5vw, 42px);
+        line-height: 1.05;
+        letter-spacing: -1px;
+    }
+
+    .product-category-btn {
+        height: 50px;
+        margin-top: 28px;
         padding-left: 18px;
     }
 
-    .product-category-btn>span:first-child {
+    .product-category-btn > span:first-child {
+        font-size: 11px;
+    }
+
+    .product-category-arrow {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (max-width: 479px) {
+    .rubber-video-section {
+        height: auto;
+        min-height: 420px;
+        padding: 60px 16px;
+    }
+
+    .rubber-video-content h2 {
+        font-size: clamp(24px, 7.5vw, 32px);
+        line-height: 1.08;
+        letter-spacing: -0.5px;
+    }
+
+    .product-category-btn {
+        height: 46px;
+        margin-top: 22px;
+        padding-left: 14px;
+    }
+
+    .product-category-btn > span:first-child {
         font-size: 10px;
     }
 
     .product-category-arrow {
-        width: 44px;
-        height: 44px;
-    }
-
-    .whatsapp-button {
-        width: 54px;
-        height: 54px;
-
-        right: 20px;
-        bottom: 20px;
+        width: 38px;
+        height: 38px;
     }
 }

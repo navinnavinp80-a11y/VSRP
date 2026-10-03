@@ -202,34 +202,57 @@
    TABLET
 ========================= */
 
-@media (max-width: 1000px) {
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1199px) {
     .process-container {
-        padding: 90px 50px 60px;
+        padding: 80px 40px 50px;
+        min-height: auto;
     }
 
     .process-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 25px;
-        margin-top: 65px;
+        gap: 30px;
+        margin-top: 60px;
     }
 
     .process-header h2 {
-        font-size: 52px;
+        font-size: clamp(44px, 4.8vw, 60px);
+    }
+}
+
+@media (max-width: 991px) {
+    .process-container {
+        padding: 70px 30px 40px;
+        min-height: auto;
+    }
+
+    .process-header h2 {
+        font-size: clamp(36px, 5.5vw, 48px);
+        letter-spacing: -2px;
+    }
+
+    .process-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 50px;
     }
 
     .process-step {
         grid-template-columns: 60px 1fr;
-        column-gap: 15px;
-        min-height: 125px;
+        column-gap: 16px;
+        min-height: 115px;
     }
 
     .step-number {
-        width: 54px;
-        height: 54px;
+        width: 52px;
+        height: 52px;
+        font-size: 16px;
     }
 
     .step-line {
-        top: 54px;
+        top: 52px;
     }
 
     .step-content h3 {
@@ -241,68 +264,66 @@
     }
 
     .process-scroll {
-        right: 50px;
+        position: static;
+        margin-top: 30px;
+        justify-content: flex-end;
     }
 }
 
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
+@media (max-width: 767px) {
     .process-section {
         min-height: auto;
     }
 
     .process-container {
         min-height: auto;
-        padding: 80px 20px 70px;
+        padding: 60px 20px 40px;
     }
 
     .process-header h2 {
-        font-size: 43px;
-        letter-spacing: -2px;
-        line-height: 1;
+        font-size: clamp(28px, 7vw, 42px);
+        letter-spacing: -1.5px;
+        line-height: 1.05;
     }
 
     .process-header p {
         font-size: 15px;
-        margin-top: 20px;
+        margin-top: 16px;
     }
 
     .process-content {
         grid-template-columns: 1fr;
         gap: 30px;
-        margin-top: 65px;
+        margin-top: 40px;
     }
 
     .process-step {
-        grid-template-columns: 58px 1fr;
-        column-gap: 15px;
-        min-height: 125px;
+        grid-template-columns: 50px 1fr;
+        column-gap: 14px;
+        min-height: 100px;
     }
 
     .step-number {
-        width: 52px;
-        height: 52px;
+        width: 46px;
+        height: 46px;
         font-size: 15px;
     }
 
     .step-line {
-        top: 52px;
+        top: 46px;
     }
 
     .step-content {
-        padding-top: 7px;
+        padding-top: 5px;
     }
 
     .step-content h3 {
-        font-size: 21px;
-        margin-bottom: 12px;
+        font-size: 19px;
+        margin-bottom: 8px;
     }
 
     .step-content p {
-        font-size: 15px;
+        font-size: 14.5px;
         line-height: 1.4;
     }
 
@@ -318,6 +339,55 @@
     .process-scroll {
         position: static;
         justify-content: flex-end;
-        margin-top: 35px;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 479px) {
+    .process-container {
+        padding: 50px 16px 30px;
+    }
+
+    .process-header h2 {
+        font-size: clamp(24px, 7.5vw, 34px);
+        letter-spacing: -1px;
+    }
+
+    .process-step {
+        grid-template-columns: 44px 1fr;
+        column-gap: 12px;
+        min-height: 90px;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 13.5px;
+    }
+
+    .step-line {
+        top: 40px;
+    }
+
+    .step-content h3 {
+        font-size: 17px;
+        margin-bottom: 6px;
+    }
+
+    .step-content p {
+        font-size: 13.5px;
+    }
+
+    .process-scroll {
+        margin-top: 20px;
+    }
+
+    .process-scroll-circle {
+        width: 32px;
+        height: 32px;
+    }
+
+    .process-scroll span {
+        font-size: 11px;
     }
 }

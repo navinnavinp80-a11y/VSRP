@@ -185,15 +185,34 @@
     gap: 11px;
 }
 
-/* TABLET */
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1199px) {
     .insights-section {
         padding: 90px 5vw;
     }
 
+    .insights-heading-content h2 {
+        font-size: clamp(40px, 4.5vw, 56px);
+        letter-spacing: -2px;
+    }
+
+    .insight-image-wrapper {
+        height: 270px;
+    }
+}
+
+@media (max-width: 991px) {
+    .insights-section {
+        padding: 80px 5vw;
+    }
+
     .insights-header {
         flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
 
     .insights-all-button {
@@ -202,27 +221,27 @@
 
     .insights-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .insight-image-wrapper {
-        height: 280px;
+        height: 250px;
     }
 }
 
-/* MOBILE */
-
-@media (max-width: 700px) {
+@media (max-width: 767px) {
     .insights-section {
-        padding: 75px 20px;
+        padding: 60px 20px;
     }
 
     .insights-heading-content h2 {
-        font-size: 43px;
-        letter-spacing: -2px;
+        font-size: clamp(28px, 7vw, 42px);
+        letter-spacing: -1.5px;
     }
 
     .insights-heading-content p {
         font-size: 15px;
+        margin-top: 14px;
     }
 
     .insights-heading-content p br {
@@ -231,18 +250,57 @@
 
     .insights-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 24px;
     }
 
     .insight-image-wrapper {
-        height: 260px;
+        height: 230px;
     }
 
     .insight-content {
-        min-height: 150px;
+        padding: 20px 18px;
+        min-height: 140px;
     }
 
     .insight-content h3 {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 479px) {
+    .insights-section {
+        padding: 50px 16px;
+    }
+
+    .insights-heading-content h2 {
+        font-size: clamp(24px, 7.5vw, 32px);
+        letter-spacing: -1px;
+    }
+
+    .insights-heading-content p {
+        font-size: 14px;
+    }
+
+    .insights-all-button {
+        height: 50px;
+        padding: 4px 4px 4px 18px;
+        font-size: 12px;
+    }
+
+    .insights-all-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .insight-image-wrapper {
+        height: 200px;
+    }
+
+    .insight-content {
+        padding: 16px 14px;
+    }
+
+    .insight-content h3 {
+        font-size: 18px;
     }
 }

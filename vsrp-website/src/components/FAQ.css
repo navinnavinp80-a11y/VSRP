@@ -254,14 +254,31 @@
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE DESIGN
 ========================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1199px) {
   .faq-container {
-    padding: 80px 40px;
+    padding: 90px 5vw 70px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .faq-section {
+    min-height: auto;
+  }
+
+  .faq-container {
+    padding: 75px 5vw 60px;
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 45px;
+    min-height: auto;
+  }
+
+  .faq-intro h2 {
+    font-size: clamp(36px, 5.5vw, 48px);
+    letter-spacing: -2px;
   }
 
   .faq-decoration {
@@ -269,50 +286,98 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
+  .faq-section {
+    min-height: auto;
+  }
+
   .faq-container {
-    padding: 70px 20px;
+    padding: 60px 20px 40px;
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
+    min-height: auto;
   }
 
   .faq-intro h2 {
-    font-size: 43px;
-    letter-spacing: -2px;
+    font-size: clamp(28px, 7vw, 40px);
+    letter-spacing: -1.5px;
   }
 
   .faq-intro > p {
     font-size: 15px;
-    margin-top: 20px;
+    margin-top: 16px;
   }
 
   .faq-button {
-    height: 55px;
-    margin-top: 35px;
+    height: 52px;
+    margin-top: 28px;
   }
 
   .faq-button-arrow {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
   }
 
   .faq-question {
-    min-height: 80px;
+    min-height: 70px;
   }
 
   .faq-question > span:first-child {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .faq-icon {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
   }
 
   .faq-answer p {
-    font-size: 15px;
-    padding-right: 15px;
-    padding-bottom: 24px;
+    font-size: 14.5px;
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 479px) {
+  .faq-container {
+    padding: 50px 16px 30px;
+    gap: 32px;
+  }
+
+  .faq-intro h2 {
+    font-size: clamp(24px, 7.5vw, 32px);
+    letter-spacing: -1px;
+  }
+
+  .faq-button {
+    height: 48px;
+    margin-top: 22px;
+    padding: 4px 4px 4px 18px;
+    font-size: 12px;
+  }
+
+  .faq-button-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .faq-question {
+    min-height: 60px;
+    gap: 12px;
+  }
+
+  .faq-question > span:first-child {
+    font-size: 15.5px;
+  }
+
+  .faq-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .faq-answer p {
+    font-size: 13.5px;
+    padding-bottom: 16px;
   }
 }
 
