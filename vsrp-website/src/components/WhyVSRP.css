@@ -1,0 +1,239 @@
+/* src/components/WhyVSRP.css */
+
+.why-vsrp {
+  position: relative;
+  width: 100%;
+  background: #EEF2F4 !important;
+  background-color: #EEF2F4 !important;
+  color: #181818 !important;
+  padding: 125px 7vw 105px;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.why-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ================================= */
+/* HEADER */
+/* ================================= */
+
+.why-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 80px;
+  align-items: center;
+}
+
+.why-heading h2 {
+  margin: 0;
+  font-size: clamp(52px, 5vw, 70px);
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: -3px;
+  color: #181818 !important;
+}
+
+.why-heading h2 span {
+  color: #F4512A !important;
+  font-weight: 700;
+}
+
+/* RIGHT DESCRIPTION */
+
+.why-intro {
+  max-width: 560px;
+}
+
+.why-intro p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #4B4B4B !important;
+}
+
+/* ================================= */
+/* CARDS */
+/* ================================= */
+
+.why-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 55px;
+}
+
+.why-card {
+  position: relative;
+  height: 420px;
+  padding: 45px;
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+}
+
+/* ================================= */
+/* ICON CIRCLE */
+/* ================================= */
+
+.why-icon {
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 50% !important;
+  background-color: #F4512A !important;
+  color: #000000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.3s ease;
+}
+
+.why-icon svg {
+  stroke: #000000 !important;
+  color: #000000 !important;
+}
+
+.why-card:hover .why-icon {
+  transform: scale(1.04);
+}
+
+/* ================================= */
+/* DIVIDER */
+/* ================================= */
+
+.why-divider {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: #DEDEDE !important;
+  border-top: 1px dashed #DEDEDE !important;
+  margin-top: 110px;
+  margin-bottom: 20px;
+}
+
+.why-divider-active {
+  background: #DEDEDE !important;
+}
+
+.why-divider-active span {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 140px;
+  height: 2px;
+  background: #F4512A !important;
+}
+
+/* ================================= */
+/* CARD CONTENT */
+/* ================================= */
+
+.why-card-content {
+  margin-top: auto;
+}
+
+.why-card-content h3 {
+  margin: 0;
+  font-size: 27px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: #181818 !important;
+}
+
+.why-card-content p {
+  max-width: 390px;
+  margin: 18px 0 0;
+  font-size: 17px;
+  line-height: 1.35;
+  color: #555555 !important;
+}
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+@media (max-width: 1000px) {
+  .why-vsrp {
+    padding: 100px 5vw;
+  }
+
+  .why-header {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .why-intro {
+    max-width: 650px;
+  }
+
+  .why-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-card:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 650px) {
+  .why-vsrp {
+    padding: 80px 24px;
+  }
+
+  .why-heading h2 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+  .why-intro p {
+    font-size: 16px;
+  }
+
+  .why-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 45px;
+  }
+
+  .why-card:last-child {
+    grid-column: auto;
+  }
+
+  .why-card {
+    height: 400px;
+    padding: 30px;
+  }
+
+  .why-icon {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .why-divider {
+    margin-top: 90px;
+  }
+
+  .why-card-content h3 {
+    font-size: 24px;
+  }
+
+  .why-card-content p {
+    font-size: 15px;
+  }
+}

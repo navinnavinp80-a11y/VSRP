@@ -1,0 +1,206 @@
+/* CTA Section Styling - Pixel Perfect Match to Screenshot */
+
+.cta-section {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  height: 620px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #000000;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Background Worker Image */
+.cta-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  filter: grayscale(100%) contrast(1.15) brightness(0.85);
+  z-index: 1;
+}
+
+/* Vignette Dark Overlay to ensure legibility for left heading & right content */
+.cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 35%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.45) 65%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 2;
+}
+
+/* Container Layout */
+.cta-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* Left Column - Heading */
+.cta-heading-col {
+  flex: 0 0 50%;
+  max-width: 580px;
+}
+
+.cta-heading-col h2 {
+  margin: 0;
+  font-size: clamp(40px, 4.2vw, 58px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.cta-highlight {
+  color: #f4512a;
+}
+
+/* Right Column - Content & Button */
+.cta-content-col {
+  flex: 0 0 36%;
+  max-width: 410px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 4px;
+}
+
+.cta-description {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.52;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  letter-spacing: -0.1px;
+}
+
+/* Pill Button */
+.cta-contact-btn {
+  margin-top: 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  height: 52px;
+  padding: 4px 4px 4px 24px;
+  background-color: #f4512a;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-contact-btn:hover {
+  background-color: #e0421d;
+  transform: translateY(-2px);
+}
+
+.cta-arrow-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #f4512a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.cta-contact-btn:hover .cta-arrow-circle {
+  transform: translateX(3px);
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 1100px) {
+  .cta-container {
+    padding: 0 50px;
+  }
+
+  .cta-heading-col h2 {
+    font-size: 46px;
+  }
+
+  .cta-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cta-section {
+    height: auto;
+    min-height: 560px;
+    padding: 80px 0;
+  }
+
+  .cta-container {
+    padding: 0 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+  }
+
+  .cta-heading-col,
+  .cta-content-col {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .cta-heading-col h2 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cta-section {
+    padding: 60px 0;
+    min-height: 500px;
+  }
+
+  .cta-container {
+    padding: 0 24px;
+    gap: 24px;
+  }
+
+  .cta-heading-col h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .cta-description {
+    font-size: 14px;
+  }
+
+  .cta-contact-btn {
+    margin-top: 24px;
+  }
+}

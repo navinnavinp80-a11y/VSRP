@@ -1,0 +1,293 @@
+/* src/components/RubberVideoSection.css */
+
+.rubber-video-section {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 680px;
+
+    overflow: hidden;
+
+    background: #111;
+
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------------------- */
+/* VIDEO */
+/* -------------------------------- */
+
+.rubber-video-bg {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+
+    transform: scale(1.02);
+}
+
+/* -------------------------------- */
+/* OVERLAY */
+/* -------------------------------- */
+
+.rubber-video-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.28),
+            rgba(0, 0, 0, 0.18),
+            rgba(0, 0, 0, 0.30));
+
+    backdrop-filter: blur(0.5px);
+}
+
+/* -------------------------------- */
+/* CONTENT */
+/* -------------------------------- */
+
+.rubber-video-content {
+    position: relative;
+
+    z-index: 3;
+
+    width: min(1100px, 90%);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+/* -------------------------------- */
+/* HEADING */
+/* -------------------------------- */
+
+.rubber-video-content h2 {
+    margin: 0;
+
+    max-width: 1050px;
+
+    font-size: clamp(48px, 5.4vw, 82px);
+
+    line-height: 0.98;
+
+    font-weight: 700;
+
+    letter-spacing: -3.5px;
+
+    color: #fff;
+}
+
+.rubber-video-content h2 span {
+    color: #f4512a;
+}
+
+/* -------------------------------- */
+/* CTA */
+/* -------------------------------- */
+
+.product-category-btn {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    height: 58px;
+
+    margin-top: 42px;
+
+    padding-left: 24px;
+    padding-right: 5px;
+
+    border-radius: 40px;
+
+    background: rgba(100, 100, 100, 0.65);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(10px);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.product-category-btn:hover {
+    background: rgba(60, 60, 60, 0.8);
+
+    transform: translateY(-3px);
+}
+
+.product-category-btn>span:first-child {
+    padding-right: 15px;
+
+    white-space: nowrap;
+}
+
+/* -------------------------------- */
+/* ORANGE CIRCLE */
+/* -------------------------------- */
+
+.product-category-arrow {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #f4512a;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.product-category-btn:hover .product-category-arrow {
+    transform: rotate(-45deg);
+
+    background: #ff633c;
+}
+
+/* -------------------------------- */
+/* WHATSAPP */
+/* -------------------------------- */
+
+.whatsapp-button {
+    position: absolute;
+
+    z-index: 10;
+
+    right: 35px;
+    bottom: 35px;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50% !important;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #25D366;
+
+    background: transparent !important;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+
+    backdrop-filter: none !important;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.08);
+
+    border-color: rgba(255, 255, 255, 0.5) !important;
+
+    background: transparent !important;
+}
+
+/* -------------------------------- */
+/* TABLET */
+/* -------------------------------- */
+
+@media (max-width: 900px) {
+
+    .rubber-video-content {
+        width: 90%;
+    }
+
+    .rubber-video-content h2 {
+        font-size: clamp(46px, 7vw, 70px);
+
+        letter-spacing: -2.5px;
+    }
+}
+
+/* -------------------------------- */
+/* MOBILE */
+/* -------------------------------- */
+
+@media (max-width: 600px) {
+
+    .rubber-video-section {
+        min-height: 650px;
+    }
+
+    .rubber-video-content {
+        width: calc(100% - 40px);
+
+        margin-top: 0;
+    }
+
+    .rubber-video-content h2 {
+        font-size: clamp(38px, 11vw, 54px);
+
+        line-height: 1;
+
+        letter-spacing: -2px;
+    }
+
+    .product-category-btn {
+        height: 54px;
+
+        margin-top: 30px;
+
+        padding-left: 18px;
+    }
+
+    .product-category-btn>span:first-child {
+        font-size: 10px;
+    }
+
+    .product-category-arrow {
+        width: 44px;
+        height: 44px;
+    }
+
+    .whatsapp-button {
+        width: 54px;
+        height: 54px;
+
+        right: 20px;
+        bottom: 20px;
+    }
+}

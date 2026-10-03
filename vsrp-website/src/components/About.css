@@ -1,0 +1,247 @@
+/* src/components/About.css */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&display=swap');
+
+.about {
+  position: relative;
+  background-color: #EEF1F5;
+  color: #111827;
+  padding: 120px 7vw;
+  overflow: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Background Design Accent */
+.about-bg-accent {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 440px;
+  height: 380px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-accent-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.about-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* LEFT COLUMN */
+.about-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-main-heading {
+  margin: 0 0 65px 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #111827;
+}
+
+.about-main-heading .highlight-orange {
+  color: #F25022;
+}
+
+/* STATS GRID */
+.about-stats-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 520px;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.stats-row.top-row {
+  padding-bottom: 30px;
+}
+
+.stats-divider {
+  width: 100%;
+  height: 1px;
+  border-top: 1px dashed #CBD2D9;
+  margin: 0;
+}
+
+.stats-row.bottom-row {
+  padding-top: 30px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #111827;
+  display: flex;
+  align-items: baseline;
+}
+
+.stat-plus {
+  color: #F25022;
+  font-weight: 800;
+  margin-left: 1px;
+}
+
+.stat-label {
+  margin: 10px 0 0 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #4B5563;
+}
+
+/* RIGHT COLUMN */
+.about-right-col {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6px;
+}
+
+.about-subheading {
+  margin: 0 0 35px 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.75rem, 2.6vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: #111827;
+}
+
+.about-paragraph {
+  margin: 0 0 22px 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4B5563;
+  max-width: 530px;
+}
+
+.about-cta-wrapper {
+  margin-top: 25px;
+}
+
+.about-cta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  background-color: #DDE1E6;
+  padding: 6px 6px 6px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.about-cta-pill:hover {
+  background-color: #D3D8DF;
+  transform: translateY(-2px);
+}
+
+.cta-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #111827;
+  text-transform: uppercase;
+}
+
+.cta-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #F25022;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.about-cta-pill:hover .cta-icon-circle {
+  transform: translateX(3px);
+  background-color: #E04318;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about-main-heading {
+    margin-bottom: 45px;
+  }
+
+  .about-right-col {
+    padding-top: 0;
+  }
+
+  .about-bg-accent {
+    width: 320px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about {
+    padding: 70px 24px;
+  }
+
+  .about-main-heading {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+  }
+
+  .about-subheading {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  .stats-row {
+    gap: 20px;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .about-bg-accent {
+    width: 220px;
+    height: 200px;
+    opacity: 0.6;
+  }
+}
