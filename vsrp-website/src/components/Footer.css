@@ -87,11 +87,11 @@
     box-sizing: border-box;
 }
 
-.social-square-btn:hover {
+/* .social-square-btn:hover {
     border-color: #F4512A;
     color: #F4512A;
     transform: translateY(-2px);
-}
+} */
 
 .social-square-btn.text-icon span {
     font-size: 16px;
