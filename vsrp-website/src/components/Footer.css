@@ -160,9 +160,9 @@
     transition: color 0.25s ease;
 }
 
-.footer-column a:hover {
+/* .footer-column a:hover {
     color: #F4512A;
-}
+} */
 
 .contact-phone,
 .location-address {
@@ -181,9 +181,9 @@
     transition: color 0.25s ease;
 }
 
-.contact-email a:hover {
+/* .contact-email a:hover {
     color: #F4512A !important;
-}
+} */
 
 /* BOTTOM COPYRIGHT BAR */
 .footer-bottom {
@@ -223,9 +223,9 @@
     transition: color 0.25s ease;
 }
 
-.footer-bottom-right a:hover {
+/* .footer-bottom-right a:hover {
     color: #F4512A;
-}
+} */
 
 .divider-line {
     color: #66666A;
