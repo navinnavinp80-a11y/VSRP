@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Minus, Plus } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 import "./FAQ.css";
 
 const faqs = [
@@ -37,12 +36,6 @@ const faqs = [
 ];
 
 const FAQ = () => {
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    const toggleFAQ = (index) => {
-        setActiveIndex(activeIndex === index ? null : index);
-    };
-
     return (
         <section className="faq-section">
             <div className="faq-container">
@@ -88,41 +81,17 @@ const FAQ = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
                 >
-                    {faqs.map((faq, index) => {
-                        const isOpen = activeIndex === index;
+                    {faqs.map((faq) => (
+                        <div className="faq-item" key={faq.question}>
+                            <div className="faq-question">
+                                <span>{faq.question}</span>
 
-                        return (
-                            <div
-                                className={`faq-item ${isOpen ? "open" : ""}`}
-                                key={faq.question}
-                            >
-                                <button
-                                    className="faq-question"
-                                    onClick={() => toggleFAQ(index)}
-                                    aria-expanded={isOpen}
-                                >
-                                    <span>{faq.question}</span>
-
-                                    <span className="faq-icon">
-                                        {isOpen ? (
-                                            <Minus size={20} strokeWidth={1.5} />
-                                        ) : (
-                                            <Plus size={20} strokeWidth={1.5} />
-                                        )}
-                                    </span>
-                                </button>
-
-                                <div
-                                    className={`faq-answer-wrapper ${isOpen ? "answer-open" : ""
-                                        }`}
-                                >
-                                    <div className="faq-answer">
-                                        <p>{faq.answer}</p>
-                                    </div>
-                                </div>
+                                <span className="faq-icon">
+                                    <Plus size={20} strokeWidth={1.5} />
+                                </span>
                             </div>
-                        );
-                    })}
+                        </div>
+                    ))}
                 </motion.div>
 
             </div>
